@@ -11,3 +11,17 @@ app.get("/home", (req, res) => {
 });
 
 app.listen(3000);
+
+// const express = require("express");
+
+// const app = express();
+// app.use(express.json());
+// const NOTE = [];
+
+// //we use post becase we send data to server from fontend
+
+// app.post("/notes", (req, res) => {
+//   NOTE.push(req.body);
+// });
+
+// module.exports = app;
