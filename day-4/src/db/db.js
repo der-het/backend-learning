@@ -1,14 +1,13 @@
-// db.js
 const mongoose = require("mongoose");
+const dns = require("dns");
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 async function connectDB() {
-  try {
-    await mongoose.connect("");
-    console.log("DB has been connected");
-  } catch (error) {
-    console.error("DB connection failed:", error.message);
-    process.exit(1); // Stop server if DB fails
-  }
+  await mongoose.connect(
+    "mongodb+srv://het:het123@cluster1.gwlxdbi.mongodb.net/",
+  );
+
+  console.log("working");
 }
 
 module.exports = connectDB;
