@@ -5,7 +5,9 @@ const app = express();
 app.use(express.json());
 
 db();
-app.use("/api/auth", authRoutes);
+//we need to give prefix(i don't what is but i need to know)
+//            👇
+app.use("/api/auth", authRoutes); //authRoutes crate kari karn ke aa nu folder banavu karn ke prodution ma am j kaam thay
 console.log("app is running");
 
-module.exports = app;
+module.exports = app; //05:25:00
