@@ -10,13 +10,14 @@ router.post("/register", authController.registerUser);
 // je api ni need hoy te aya create thay
 //pachi tena logic ne controllers ma send kari dey
 
-router.get("/test", (req, res) => {
-  console.log("cookies:", req.cookies);
-  res.json({
-    message: "test rout",
-    cookies: req.cookies,
-  });
-});
+// router.get("/test", (req, res) => {      |    this is code for cookie
+//   console.log("cookies:", req.cookies);  |
+//   res.json({                             |
+//     message: "test rout",            <== |
+//     cookies: req.cookies,                |
+//   });                                    |
+// });                                      |
+//-------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------
 //router ni help thi export kari didhi
