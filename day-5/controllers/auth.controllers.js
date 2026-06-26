@@ -1,5 +1,6 @@
 const userModel = require("../src/model/user.model");
 const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
 
 async function registerUser(req, res) {
   const { username, email, password } = req.body; //routes mathi ayaa avshe
@@ -16,10 +17,11 @@ async function registerUser(req, res) {
     },
     process.env.JWT_SECRET,
   );
+
+  res.cookie("token", token); // we send token to the browser for more use
   res.status(201).json({
     message: "user has registered",
     user,
-    token,
   });
 }
 
